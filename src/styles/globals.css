@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+:root {
+    --filter-invert: 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-end-rgb: 255, 255, 255;
+    --background-start-rgb: 232, 237, 242;
+
+    --background: #ffffff;
+    --background-secondary: #f8f8fa;
+
+    --primary: #009ffd;
+    --primary-text: #ffffff;
+    --primary-dark: #0071b4;
+    --primary-light: #e6f5ff;
+    --primary-medium: #55bbe4;
+
+    --secondary: #87cefa;
+    --secondary-text: #ffffff;
+    --secondary-dark: #7bbbe4;
+    --secondary-medium: #a679a3;
+    --secondary-light: #f3faff;
+
+    --secondary2: #81407c;
+    --secondary2-text: #ffffff;
+    --secondary2-dark: #673363;
+    --secondary2-medium: #a679a3;
+    --secondary2-light: #d1e6f2;
+
+    --error: #d32f2f;
+    --error-text: #ffffff;
+    --error-dark: #9f3b23;
+    --error-medium: #e57373;
+    --error-light: #ff7961;
+
+    --accent: #ffcc00;
+    --accent-text: #212121;
+    --accent-dark: #e8ba00;
+    --accent-medium: #f9ba59;
+    --accent-light: #fffae6;
+
+    --success: #42ba96;
+    --success-text: #ffffff;
+    --success-dark: #42ba96;
+    --success-medium: #42ba96;
+    --success-light: #c8e6c9;
+
+    --info: #01aef3;
+    --info-text: #ffffff;
+    --info-dark: #007fc0;
+    --info-medium: #67e0ff;
+    --info-light: #bbdefb;
+
+    --warning: #f8b144;
+    --warning-text: #212121;
+    --warning-dark: #f8a930;
+    --warning-medium: #f9ba59;
+    --warning-light: #fff9c4;
+
+    --border-radius: 4px;
+    --transition-duration: 0.3s;
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* [data-theme="dark"] {
+  --filter-invert: 1;
+  --background-end-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+
+  --background: #212121;
+  --background-secondary: #1c1c1e;
+
+  --primary: #5584AC;
+  --primary-text: #212121;
+  --primary-dark: #323f4b;
+  --primary-light: #01aef3;
+  --primary-medium: #55bbe4;
+
+  --secondary: #857f72;
+  --secondary-text: #212121;
+  --secondary-dark: #504a40;
+  --secondary-medium: #d3cec4;
+  --secondary-light: #a1c3d9;
+
+  --error: #D32F2F;
+  --error-text: #ffffff;
+  --error-dark: #9F3B23;
+  --error-medium: #E57373;
+  --error-light: #ff8a80;
+
+  --accent: #f8b144;
+  --accent-text: #212121;
+  --accent-dark: #F8A930;
+  --accent-medium: #f9ba59;
+  --accent-light: #ffe0b2;
+
+  --success: #42ba96;
+  --success-text: #ffffff;
+  --success-dark: #42ba96;
+  --success-medium: #42ba96;
+  --success-light: #00e1171a;
+
+  --info: #01aef3;
+  --info-text: #ffffff;
+  --info-dark: #323f4b;
+  --info-medium: #5584AC;
+  --info-light: #bbdefb;
+
+  --warning: #f8b144;
+  --warning-text: #ffffff;
+  --warning-dark: #F8A930;
+  --warning-medium: #f9ba59;
+  --warning-light: #fff5e0;
+
+  --border-radius: 4px;
+  --transition-duration: 0.3s;
+  --box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    color: rgb(var(--foreground-rgb));
+    background-color: var(--primary-light);
+}
+
+ul[class],
+li,
+ol[class] {
+    list-style: none;
+}
+
+[lang="jp"] {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+[lang="en"] {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.whitespace-normal {
+    white-space: normal;
+}
+
+body form input:-internal-autofill-selected {
+    background-color: unset;
+}
+
+.my-toast[data-sonner-toast] button[data-close-button] {
+    right: 0;
+    left: unset;
+    transform: translate(35%, -35%);
+}
+
+.c-scrollbar-0 {
+    scrollbar-width: none;
+}
+.c-scrollbar {
+    overflow: auto;
+}
+
+.c-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+.c-scrollbar-0::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.c-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+}
+
+.c-scrollbar::-webkit-scrollbar-track {
+    background-color: lightgray;
+}
+
+.c-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-light);
+}
+
+.c-scrollbar::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.react-select .react-select-input input {
+    box-shadow: none;
+}
+
+.react-select .react-select-menu .react-select-option:hover {
+    cursor: pointer;
+}
+.drop-zone-active {
+    border: 2px dashed var(--primary);
+}
+
+@keyframes circulating-border {
+    0% {
+        border-top-color: currentColor;
+        border-bottom-color: transparent;
+    }
+    25% {
+        border-right-color: currentColor;
+        border-left-color: transparent;
+    }
+    50% {
+        border-bottom-color: currentColor;
+        border-top-color: transparent;
+    }
+    75% {
+        border-left-color: currentColor;
+        border-right-color: transparent;
+    }
+    100% {
+        border-top-color: currentColor;
+        border-bottom-color: transparent;
+    }
+}
+
+@keyframes ripple-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes wave-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10%);
+    }
+}
+
+@keyframes move-back-forth {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes grow-shrink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

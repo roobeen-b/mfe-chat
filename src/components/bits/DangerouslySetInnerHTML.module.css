@@ -1,0 +1,6 @@
+.desc {
+  color: theme("colors.gray.800");
+}
+.desc a {
+  color: theme("colors.th-p");
+}
