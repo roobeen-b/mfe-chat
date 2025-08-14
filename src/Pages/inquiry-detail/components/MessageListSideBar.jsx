@@ -19,7 +19,7 @@ export const MessageListSideBar = (props) => {
         <IconButton
           size="small"
           component={Link}
-          href="/inquiry/"
+          to="/inquiry/"
           className="ms-mw-head-back"
           // onClick={() => router.back()}
         >

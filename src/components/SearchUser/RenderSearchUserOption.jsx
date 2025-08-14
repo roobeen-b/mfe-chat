@@ -26,7 +26,7 @@ const RenderSearchUserOption = (props) => {
       <Link
         id={keyId}
         className="rsu-ow-a"
-        href={redirect ? getProperLink(option) : "#"}
+        to={redirect ? getProperLink(option) : "#"}
       >
         <div className="rsu-ow-item">
           <AvatarComp

@@ -319,7 +319,7 @@ const Sidebar = ({ isSidebarOpen }) => {
               >
                 <ListItemButton
                   component={Link}
-                  href="/dashboard"
+                  to="/dashboard"
                   sx={{
                     minHeight: 44,
                     justifyContent: isSidebarOpen ? "initial" : "center",
@@ -403,7 +403,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                   >
                     <ListItemButton
                       component={item.href !== "#" ? Link : "div"}
-                      href={item.href !== "#" ? item.href : undefined}
+                      to={item.href !== "#" ? item.href : undefined}
                       sx={{
                         py: 0.5,
                         backgroundColor: isActive(item.href)
@@ -485,7 +485,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                   >
                     <ListItemButton
                       component={item.href !== "#" ? Link : "div"}
-                      href={item.href !== "#" ? item.href : undefined}
+                      to={item.href !== "#" ? item.href : undefined}
                       sx={{
                         py: 0.5,
                         backgroundColor: isActive(item.href)
@@ -569,7 +569,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                   >
                     <ListItemButton
                       component={item.href !== "#" ? Link : "div"}
-                      href={item.href !== "#" ? item.href : undefined}
+                      to={item.href !== "#" ? item.href : undefined}
                       sx={{
                         py: 0.5,
                         backgroundColor: isActive(item.href)
@@ -654,7 +654,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                   >
                     <ListItemButton
                       component={item.href !== "#" ? Link : "div"}
-                      href={item.href !== "#" ? item.href : undefined}
+                      to={item.href !== "#" ? item.href : undefined}
                       sx={{
                         py: 0.5,
                         backgroundColor: isActive(item.href)
@@ -689,7 +689,7 @@ const Sidebar = ({ isSidebarOpen }) => {
               >
                 <ListItemButton
                   component={Link}
-                  href="#"
+                  to="#"
                   sx={{
                     minHeight: 44,
                     justifyContent: isSidebarOpen ? "initial" : "center",
@@ -749,7 +749,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                 <ListItem disablePadding key={index}>
                   <ListItemButton
                     component={item.href !== "#" ? Link : "div"}
-                    href={item.href !== "#" ? item.href : undefined}
+                    to={item.href !== "#" ? item.href : undefined}
                     onClick={item.href !== "#" ? handlePopoverClose : undefined}
                     sx={{
                       py: 0.75,

@@ -1,10 +1,42 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { federation } from "@module-federation/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    federation({
+      name: "chat",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Chat": "./src/App.jsx",
+      },
+      shared: {
+        react: {
+          requiredVersion: "^19.1.1",
+          singleton: true,
+        },
+        "react-dom": {
+          requiredVersion: "^19.1.1",
+          singleton: true,
+        },
+        "@reduxjs/toolkit": {
+          requiredVersion: "^2.8.2",
+          singleton: true,
+        },
+        "react-redux": {
+          requiredVersion: "^9.2.0",
+          singleton: true,
+        },
+        "react-router": {
+          requiredVersion: "^7.8.0",
+          singleton: true,
+        },
+      },
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.join(__dirname, "./src"),

@@ -50,7 +50,7 @@ export const InquireList = (props) => {
             <Link
               key={i?.conversation_id}
               className="ipw-list-item"
-              href={`/inquiry/${i?.conversation_id}?c=g${eName}`}
+              to={`/inquiry/${i?.conversation_id}?c=g${eName}`}
             >
               <div className="ipw-list-item-x ipw-list-item-name">
                 <div className="ipw-list-item-name-detail-one">

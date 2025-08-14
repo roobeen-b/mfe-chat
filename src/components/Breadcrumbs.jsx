@@ -11,7 +11,7 @@ export default function CustomBreadcrumbs({ items }) {
           item.href ? (
             <Link
               key={index}
-              href={item.href}
+              to={item.href}
               style={{ color: "#000", textDecoration: "none" }}
             >
               {formatMessage({ id: item.label })}

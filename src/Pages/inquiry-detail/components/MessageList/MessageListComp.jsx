@@ -80,7 +80,7 @@ export const MessageListComp = (props) => {
         return (
           <Link
             key={i?.conversation_id + `-${j}`}
-            href={`/inquiry/${i?.conversation_id}?c=g${eName}`}
+            to={`/inquiry/${i?.conversation_id}?c=g${eName}`}
           >
             <div
               className={`ms-mw-body-list-item ms-mw-body-list-item${

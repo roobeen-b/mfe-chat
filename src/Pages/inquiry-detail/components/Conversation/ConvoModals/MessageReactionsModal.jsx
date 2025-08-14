@@ -20,10 +20,7 @@ export const MessageReactionsModal = (props) => {
 
         return (
           <li key={j}>
-            <Link
-              className="cmw-reactions-item"
-              href={`/profile/${x.username}`}
-            >
+            <Link className="cmw-reactions-item" to={`/profile/${x.username}`}>
               <>
                 <AvatarComp
                   alt={alt}

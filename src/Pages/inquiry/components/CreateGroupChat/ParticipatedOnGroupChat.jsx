@@ -47,7 +47,7 @@ export const ParticipatedOnGroupChat = (props) => {
               <li className="cgc-mw-pgc-li" key={i.conversation_id + `-${j}`}>
                 <Link
                   onClick={onGroupClick}
-                  href={`/inquiry/${i?.conversation_id}`}
+                  to={`/inquiry/${i?.conversation_id}`}
                 >
                   <div className="cgc-mw-pgc-li-detail-one">
                     <AvatarComp

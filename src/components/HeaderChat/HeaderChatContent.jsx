@@ -51,7 +51,7 @@ export const HeaderChatContent = () => {
           component={Link}
           color="primary"
           disableElevation
-          href="/inquiry"
+          to="/inquiry"
           variant="contained"
         >
           {formatMessage({ id: "see_all_chats" })}

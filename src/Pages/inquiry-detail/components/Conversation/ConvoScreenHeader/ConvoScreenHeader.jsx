@@ -107,7 +107,7 @@ export const ConvoScreenHeader = (props) => {
                 size="small"
                 target="_blank"
                 component={Link}
-                href={`/profile/${otherUser?.username}`}
+                to={`/profile/${otherUser?.username}`}
               >
                 <PersonIcon htmlColor="#3D4548" />
               </IconButton>

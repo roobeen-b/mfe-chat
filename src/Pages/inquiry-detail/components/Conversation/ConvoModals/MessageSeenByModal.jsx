@@ -17,7 +17,7 @@ export const MessageSeenByModal = (props) => {
         const src = x.image || "";
         return (
           <li key={j}>
-            <Link className="cmw-seen-by-item" href={`/profile/${x.username}`}>
+            <Link className="cmw-seen-by-item" to={`/profile/${x.username}`}>
               <>
                 <AvatarComp
                   alt={alt}
