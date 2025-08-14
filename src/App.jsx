@@ -11,20 +11,18 @@ import InquiryDetailPage from "./Pages/inquiry-detail";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Provider store={reduxStore}>
-        <LocalizationWrapper>
-          <SocketProvider>
-            <Routes>
-              {/* <Route index element={<Dashboard />} /> */}
-              <Route index element={<InquiryPage />} />
-              <Route path="/inquiry" element={<InquiryPage />} />
-              <Route path="/inquiry/:id" element={<InquiryDetailPage />} />
-            </Routes>
-          </SocketProvider>
-        </LocalizationWrapper>
-      </Provider>
-    </BrowserRouter>
+    <Provider store={reduxStore}>
+      <LocalizationWrapper>
+        <SocketProvider>
+          <Routes>
+            {/* <Route index element={<Dashboard />} /> */}
+            <Route index element={<InquiryPage />} />
+            <Route path="/" element={<InquiryPage />} />
+            <Route path=":id" element={<InquiryDetailPage />} />
+          </Routes>
+        </SocketProvider>
+      </LocalizationWrapper>
+    </Provider>
   );
 }
 
