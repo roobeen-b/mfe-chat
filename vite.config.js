@@ -11,7 +11,10 @@ export default defineConfig({
       name: "chat",
       filename: "remoteEntry.js",
       exposes: {
-        "./Chat": "./src/App.jsx",
+        // "./Chat": "./src/App.jsx",
+        "./InquiryPage": "./src/Pages/inquiry/index.jsx",
+        "./InquiryDetailPage": "./src/Pages/inquiry-detail/index.jsx",
+        "./SocketProvider": "./src/components/socket/SocketProvider",
       },
       shared: {
         react: {
@@ -33,6 +36,10 @@ export default defineConfig({
         "react-router": {
           requiredVersion: "^7.8.0",
           singleton: true,
+        },
+        "@emotion/react": {
+          singleton: true,
+          requiredVersion: "^11.14.0",
         },
       },
     }),
